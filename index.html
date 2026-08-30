@@ -16,7 +16,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@500;600;700&family=Quicksand:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -40,6 +40,11 @@
 
   <svg class="mascot" id="mascot" viewBox="0 0 220 240" aria-hidden="true">
     <!-- Silueta original inspirada en el look "cute-punk": conejita traviesa con orejas de diablita y moño-calavera -->
+    <defs>
+      <clipPath id="mascotHeadClip">
+        <circle cx="110" cy="130" r="62"/>
+      </clipPath>
+    </defs>
     <ellipse class="mascot-shadow" cx="110" cy="228" rx="55" ry="8"/>
     <path class="mascot-ear mascot-ear-l" d="M70 90 C 40 40, 30 -5, 55 5 C 80 15, 85 70, 92 100 Z"/>
     <path class="mascot-ear mascot-ear-r" d="M150 90 C 180 40, 190 -5, 165 5 C 140 15, 135 70, 128 100 Z"/>
@@ -56,7 +61,7 @@
   </svg>
 
   <p class="eyebrow">30 de agosto · Día de la Enfermera Peruana</p>
-  <h1 class="hero-title">Feliz Día,<br><span id="nombreHero">[Nombre]</span> <span class="charm">🖤🎀</span></h1>
+  <h1 class="hero-title">Feliz Día,<br><span id="nombreHero">[Nombre]</span> <span class="charm hero-icons" id="heroIcons"></span></h1>
   <p class="hero-sub" id="heroSub">Preparé algo especial para la enfermera más increíble que conozco.</p>
 
   <button class="cta" id="ctaStart">Descubre tu sorpresa <span aria-hidden="true">↓</span></button>
