@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Feliz Día de la Enfermera 🖤🎀</title>
+<meta name="description" content="Una sorpresa interactiva para la mejor enfermera">
+
+<!-- Instalable en Android / iPhone como app -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d0710">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Feliz Día">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Fondo de estrellitas / destellos, generado por JS -->
+<div class="sparkle-field" id="sparkleField" aria-hidden="true"></div>
+
+<!-- Barra de progreso de secciones -->
+<nav class="dots" id="dots" aria-label="Progreso de la sorpresa">
+  <button class="dot active" data-target="hero" aria-label="Inicio"></button>
+  <button class="dot" data-target="datos" aria-label="Sobre ti"></button>
+  <button class="dot" data-target="collage" aria-label="Collage"></button>
+  <button class="dot" data-target="ficha" aria-label="Ficha"></button>
+  <button class="dot" data-target="carta" aria-label="Carta"></button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="section hero">
+  <div class="hero-glow"></div>
+
+  <svg class="mascot" id="mascot" viewBox="0 0 220 240" aria-hidden="true">
+    <!-- Silueta original inspirada en el look "cute-punk": conejita traviesa con orejas de diablita y moño-calavera -->
+    <ellipse class="mascot-shadow" cx="110" cy="228" rx="55" ry="8"/>
+    <path class="mascot-ear mascot-ear-l" d="M70 90 C 40 40, 30 -5, 55 5 C 80 15, 85 70, 92 100 Z"/>
+    <path class="mascot-ear mascot-ear-r" d="M150 90 C 180 40, 190 -5, 165 5 C 140 15, 135 70, 128 100 Z"/>
+    <circle class="mascot-head" cx="110" cy="130" r="62"/>
+    <path class="mascot-cheek" d="M60 140 q-14 6 -6 20 q10 10 20 -2 Z"/>
+    <path class="mascot-cheek" d="M160 140 q14 6 6 20 q-10 10 -20 -2 Z"/>
+    <circle class="mascot-eye" cx="88" cy="128" r="6"/>
+    <circle class="mascot-eye" cx="132" cy="128" r="6"/>
+    <path class="mascot-mouth" d="M100 150 q10 10 20 0"/>
+    <g class="mascot-bow" transform="translate(48,58) rotate(-18)">
+      <path d="M0 8 C -16 -10, -16 26, 0 8 C 16 -10, 16 26, 0 8 Z"/>
+      <circle class="bow-skull" cx="0" cy="8" r="6"/>
+    </g>
+  </svg>
+
+  <p class="eyebrow">30 de agosto · Día de la Enfermera Peruana</p>
+  <h1 class="hero-title">Feliz Día,<br><span id="nombreHero">[Nombre]</span> <span class="charm">🖤🎀</span></h1>
+  <p class="hero-sub" id="heroSub">Preparé algo especial para la enfermera más increíble que conozco.</p>
+
+  <button class="cta" id="ctaStart">Descubre tu sorpresa <span aria-hidden="true">↓</span></button>
+</section>
+
+<!-- ============ DATOS / FACTS ============ -->
+<section id="datos" class="section">
+  <p class="eyebrow">Sobre ti</p>
+  <h2 class="section-title">Cositas que te hacen tú <span class="charm">✦</span></h2>
+  <p class="section-hint">Toca cada tarjeta para voltearla</p>
+
+  <div class="cards-grid" id="cardsGrid"><!-- generado por JS a partir de CONFIG.datos --></div>
+</section>
+
+<!-- ============ COLLAGE ============ -->
+<section id="collage" class="section">
+  <p class="eyebrow">Collage</p>
+  <h2 class="section-title">Momentos contigo <span class="charm">🦇</span></h2>
+  <p class="section-hint">Toca cada polaroid para leer la notita</p>
+
+  <div class="polaroid-board" id="polaroidBoard"><!-- generado por JS a partir de CONFIG.fotos --></div>
+</section>
+
+<!-- ============ FICHA DE ENFERMERA (clipboard interactivo) ============ -->
+<section id="ficha" class="section">
+  <p class="eyebrow">Historial clínico ✂️</p>
+  <h2 class="section-title">Ficha de la enfermera favorita</h2>
+  <p class="section-hint">Marca cada motivo — todos son 100% ciertos</p>
+
+  <div class="clipboard">
+    <div class="clip"></div>
+    <div class="clipboard-header">
+      <span>Paciente:</span> <strong id="fichaNombre">[Nombre]</strong>
+      <span class="stamp">CONFIRMADO 🖤</span>
+    </div>
+    <ul class="chart-list" id="chartList"><!-- generado por JS a partir de CONFIG.razones --></ul>
+  </div>
+
+  <div class="clinical-toast" id="clinicalToast" role="status" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span>PERFIL CLÍNICO PERFECTO</span>
+  </div>
+</section>
+
+<!-- ============ CARTA FINAL ============ -->
+<section id="carta" class="section carta-section">
+  <p class="eyebrow">Para ti</p>
+  <h2 class="section-title">Una cartita antes de irme <span class="charm">💌</span></h2>
+
+  <div class="envelope" id="envelope">
+    <div class="envelope-back"></div>
+    <div class="envelope-letter" id="envelopeLetter">
+      <button class="letter-close" id="letterClose" aria-label="Cerrar carta">✕</button>
+      <div id="letterText" class="letter-body"></div>
+      <p class="letter-sign" id="letterSign">Con cariño, [Tu nombre] 🖤</p>
+      <button class="hug-btn" id="hugBtn">Enviar un abrazo virtual 🤍</button>
+    </div>
+    <div class="envelope-flap"></div>
+    <div class="envelope-seal" id="envelopeSeal">🎀</div>
+  </div>
+  <p class="section-hint" id="envelopeHint">Toca el sobre para abrirlo</p>
+
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+</section>
+
+<footer class="footer">
+  <p>hecho con 🖤 para <span id="footerNombre">[Nombre]</span> — <span id="footerFecha">30 de agosto</span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
