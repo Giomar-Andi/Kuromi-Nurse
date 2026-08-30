@@ -5,13 +5,8 @@
 const CONFIG = {
   nombre: "Jazmin",
 
-  // Frase corta debajo del título principal
   heroSub: "Preparé algo especial para una de las enfermeras más increíbles de este mundo.",
 
-  // 6 tarjetas volteables.
-  // "icono" debe ser una de estas claves: stetoscopio, moño, corazon, musica, pastel, estrella
-  // "fondo": deja "" para el fondo por defecto, o pon una ruta de imagen (ej: "img/tarjeta1.jpg")
-  //          para que esa tarjeta muestre tu foto de fondo en vez del color.
   datos: [
     { icono: "stetoscopio", label: "Profesión", texto: "Demuestras en cada practica que tienes la vocación para ello, mujer de grande corazon y de manos bendecidas.", fondo: "img/Kuromi obstetra.jpg" },
     { icono: "moño", label: "Estilo", texto: "Mujer de mucho carácter, con destellos de ternura y amor, persistente. Igual que Kuromi.", fondo: "img/kuromi study.jpg" },
@@ -21,9 +16,6 @@ const CONFIG = {
     { icono: "estrella", label: "Superpoder", texto: "Realmente me haz demostrado que a pesar de todos los problemas que te afligen, puedes superarlos con tu esfuerzo y voluntad.", fondo: "img/kuromi ninja.jpg" },
   ],
 
-  // Collage de "fotos" — reemplaza src por la ruta de la imagen real,
-  // por ejemplo "fotos/foto1.jpg". Si dejas src vacío se muestra un
-  // marco decorativo esperando la imagen. "nota" es el mensajito oculto.
   fotos: [
     { src: "", caption: "Uno", nota: "Ese día me reí muchísimo contigo 🖤" },
     { src: "", caption: "Dos", nota: "Aquí se nota lo increíble que eres." },
@@ -33,8 +25,6 @@ const CONFIG = {
     { src: "", caption: "Seis", nota: "Gracias por siempre estar 🎀" },
   ],
 
-  // Lista tipo "ficha clínica" — motivos por los que la admiras.
-  // Cuando se marcan TODOS, aparece el aviso "PERFIL CLÍNICO PERFECTO".
   razones: [
     "Cuidas a tus pacientes como si fueran de tu familia.",
     "Nunca te rindes, ni en los turnos más difíciles.",
@@ -44,7 +34,6 @@ const CONFIG = {
     "Te esfuerzas constantemente por mejorar, jamás te rindes.",
   ],
 
-  // Carta final — puedes usar varios párrafos separados por \n\n
   carta: "Hoy es tu día y quiero que sepas lo mucho que admiro todo lo que haces. " +
          "Gracias por tu entrega, tu paciencia y tu cariño con cada persona que cuidas. " +
          "Es un camino relativamente duro, horas de estudio sin dormir para cumplir un sueño " +
@@ -66,7 +55,7 @@ const CONFIG = {
 };
 
 /* =========================================================================
-   ÍCONOS — estilo lineal, serio y minimalista (tipo favicon), no emojis
+   ÍCONOS
    ========================================================================= */
 const ICONOS = {
   stetoscopio: '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v7a4 4 0 0 0 8 0V3"/><path d="M11 14v3a6 6 0 0 0 12 0v-2"/><circle cx="23" cy="13" r="2.1"/><circle cx="7" cy="3" r="1.3"/><circle cx="15" cy="3" r="1.3"/></svg>',
@@ -78,7 +67,7 @@ const ICONOS = {
 };
 
 /* =========================================================================
-   A partir de aquí no es necesario editar nada — solo lógica de la página
+   LÓGICA DE LA PÁGINA
    ========================================================================= */
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -129,7 +118,7 @@ function crearDestellos() {
   }
 }
 
-/* ---------- Tarjetas volteables (con ícono serio y fondo opcional) ---------- */
+/* ---------- Tarjetas volteables ---------- */
 function crearTarjetas() {
   const grid = document.getElementById("cardsGrid");
   CONFIG.datos.forEach((dato, i) => {
@@ -153,6 +142,7 @@ function crearTarjetas() {
         </div>
         <div class="flip-face flip-back">${dato.texto}</div>
       </div>`;
+    
     const toggle = () => card.classList.toggle("flipped");
     card.addEventListener("click", toggle);
     card.addEventListener("keydown", (e) => {
@@ -207,11 +197,13 @@ function crearFicha() {
     li.setAttribute("role", "checkbox");
     li.setAttribute("aria-checked", "false");
     li.innerHTML = `<span class="chart-check">✓</span><span class="chart-text">${razon}</span>`;
+    
     const toggle = () => {
       const checked = li.classList.toggle("checked");
       li.setAttribute("aria-checked", String(checked));
       verificarFichaCompleta(items);
     };
+    
     li.addEventListener("click", toggle);
     li.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
@@ -232,7 +224,6 @@ function mostrarToastClinico() {
   const toast = document.getElementById("clinicalToast");
   toast.classList.add("show");
   
-  // Lanzar fuegos artificiales
   lanzarFuegosArtificiales();
   
   clearTimeout(toast._timeout);
@@ -241,7 +232,7 @@ function mostrarToastClinico() {
   }, 4000);
 }
 
-/* Fuegos artificiales más espectaculares */
+/* Fuegos artificiales */
 function lanzarFuegosArtificiales() {
   const colores = ['#ff2f92', '#7b2ff7', '#ffe066', '#ff6b6b', '#4ecdc4', '#ffffff'];
   const numFuegos = 5;
@@ -430,7 +421,7 @@ function configurarScrollSpy() {
   sections.forEach((s) => s && observer.observe(s));
 }
 
-/* ---------- Parallax suave de la mascota ---------- */
+/* ---------- Parallax suave de Kuromi ---------- */
 function configurarMascotaParallax() {
   const mascot = document.getElementById("floatingKuromi");
   if (prefersReducedMotion || !mascot) return;
