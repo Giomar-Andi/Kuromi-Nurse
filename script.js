@@ -3,22 +3,22 @@
    No necesitas tocar el resto del archivo para personalizar la página.
    ========================================================================= */
 const CONFIG = {
-  nombre: "[Nombre]",
+  nombre: "Jazmin",
 
   // Frase corta debajo del título principal
-  heroSub: "Preparé algo especial para la enfermera más increíble que conozco.",
+  heroSub: "Preparé algo especial para una de las enfermeras más increíbles de este mundo.",
 
   // 6 tarjetas volteables.
   // "icono" debe ser una de estas claves: stetoscopio, moño, corazon, musica, pastel, estrella
   // "fondo": deja "" para el fondo por defecto, o pon una ruta de imagen (ej: "img/tarjeta1.jpg")
   //          para que esa tarjeta muestre tu foto de fondo en vez del color.
   datos: [
-    { icono: "stetoscopio", label: "Profesión", texto: "Cuida vidas todos los días con el corazón por delante.", fondo: "" },
-    { icono: "moño", label: "Estilo", texto: "Tierna por fuera, con carácter por dentro. Igual que Kuromi.", fondo: "" },
-    { icono: "corazon", label: "Color favorito", texto: "[Su color favorito]", fondo: "" },
-    { icono: "musica", label: "Canción favorita", texto: "[Su canción favorita]", fondo: "" },
-    { icono: "pastel", label: "Antojo favorito", texto: "[Su comida o postre favorito]", fondo: "" },
-    { icono: "estrella", label: "Superpoder", texto: "Hacer que un mal día se sienta mejor.", fondo: "" },
+    { icono: "stetoscopio", label: "Profesión", texto: "Demuestras en cada practica que tienes la vocación para ello, mujer de grande corazon y de manos bendecidas.", fondo: "img/kuromi-obstetra.jpg" },
+    { icono: "moño", label: "Estilo", texto: "Mujer de mucho carácter, con destellos de ternura y amor, persistente. Igual que Kuromi.", fondo: "img/kuromi study.jpg" },
+    { icono: "corazon", label: "Color favorito", texto: "Aun por descubrirlo", fondo: "img/kuromi gamer.jpg" },
+    { icono: "musica", label: "Banda favorita", texto: "Queen, Los cafres, Norick, Guerreros del bajo, Canserbero, etc.", fondo: "img/kuromi phone.jpg" },
+    { icono: "pastel", label: "Antojo favorito", texto: "Tallarines verdes", fondo: "img/kuromi sleep.jpg" },
+    { icono: "estrella", label: "Superpoder", texto: "Realmente me haz demostrado que a pesar de todos los problemas que te afligen, puedes superarlos con tu esfuerzo y voluntad.", fondo: "img/kuromi ninja.jpg" },
   ],
 
   // Collage de "fotos" — reemplaza src por la ruta de la imagen real,
@@ -39,18 +39,28 @@ const CONFIG = {
     "Cuidas a tus pacientes como si fueran de tu familia.",
     "Nunca te rindes, ni en los turnos más difíciles.",
     "Tienes el corazón más grande que conozco.",
-    "Siempre sacas una sonrisa aunque estés cansada.",
-    "Eres la amiga que todos quisieran tener.",
-    "[Agrega otro motivo aquí]",
+    "Siempre sacas una sonrisa aunque estés cansada o triste.",
+    "Luchas constantemente contra tus problemas y sales de ellos con firmeza.",
+    "Te esfuerzas constantemente por mejorar, jamás te rindes.",
   ],
 
   // Carta final — puedes usar varios párrafos separados por \n\n
   carta: "Hoy es tu día y quiero que sepas lo mucho que admiro todo lo que haces. " +
          "Gracias por tu entrega, tu paciencia y tu cariño con cada persona que cuidas.\n\n" +
-         "[Escribe aquí el resto de tu mensaje para ella]",
-  firma: "Con cariño, [Tu nombre] 🖤",
+         "Es un camido relativamente duro, horas de estudio sin dormir para cumplir un sueño \n\n" +
+         "muy grande y esperanzador para cada persona que llegue a tus manos, demuestras con amor que \n\n" +
+         "es un trabajo humanizado que no solo requiere de agallas y mente fría, sino tambien de empatia \n\n" +
+         "y paciencia. Reconozco tu valor como profesional y admiro la calidad de persona que eres. \n\n" +
+         "Dios bendiga enormemente tu camino, bendiga tus manos milagrosas y llene de paz tu corazón. \n\n" +
+         "Cada día seré duro, unos de mucha alegría, otros de frustración, unos de mucho dolor y pena, \n\n" +
+         "Conozco tu corazón lo suficiente como para saber que cada una de esas situaciones lo sentirás " +
+         "con intensidad, me encantaría acompañarte en los buenos momentos así como en los malos, " +
+         "sin embargo se que en tus tristezas hay mucho que no quieras contar, sin embargo si yo no \n\n" +
+         "puedo estar rezo por ti para que Dios te acompañe en esos momentos y te de la fuerza para \n\n" +
+         "superarte cada día, como siempre lo haces. Dios te bendiga siempre y cuide a tu familia y amigos. AMÉN." 
+  firma: "Con cariño, Andi 🖤 Numeros 6:24-26",
 
-  fecha: "30 de agosto · Día de la Enfermera Peruana",
+  fecha: "30 de agosto · Feliz día de la enfermera Peruana.",
 };
 
 /* =========================================================================
