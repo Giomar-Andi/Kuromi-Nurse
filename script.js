@@ -13,7 +13,7 @@ const CONFIG = {
   // "fondo": deja "" para el fondo por defecto, o pon una ruta de imagen (ej: "img/tarjeta1.jpg")
   //          para que esa tarjeta muestre tu foto de fondo en vez del color.
   datos: [
-    { icono: "stetoscopio", label: "Profesión", texto: "Demuestras en cada practica que tienes la vocación para ello, mujer de grande corazon y de manos bendecidas.", fondo: "img/kuromi-obstetra.jpg" },
+    { icono: "stetoscopio", label: "Profesión", texto: "Demuestras en cada practica que tienes la vocación para ello, mujer de grande corazon y de manos bendecidas.", fondo: "img/Kuromi-obstetra.jpg" },
     { icono: "moño", label: "Estilo", texto: "Mujer de mucho carácter, con destellos de ternura y amor, persistente. Igual que Kuromi.", fondo: "img/kuromi study.jpg" },
     { icono: "corazon", label: "Color favorito", texto: "Aun por descubrirlo", fondo: "img/kuromi gamer.jpg" },
     { icono: "musica", label: "Banda favorita", texto: "Queen, Los cafres, Norick, Guerreros del bajo, Canserbero, etc.", fondo: "img/kuromi phone.jpg" },
