@@ -46,18 +46,20 @@ const CONFIG = {
 
   // Carta final — puedes usar varios párrafos separados por \n\n
   carta: "Hoy es tu día y quiero que sepas lo mucho que admiro todo lo que haces. " +
-         "Gracias por tu entrega, tu paciencia y tu cariño con cada persona que cuidas.\n\n" +
-         "Es un camido relativamente duro, horas de estudio sin dormir para cumplir un sueño \n\n" +
-         "muy grande y esperanzador para cada persona que llegue a tus manos, demuestras con amor que \n\n" +
-         "es un trabajo humanizado que no solo requiere de agallas y mente fría, sino tambien de empatia \n\n" +
+         "Gracias por tu entrega, tu paciencia y tu cariño con cada persona que cuidas. " +
+         "Es un camino relativamente duro, horas de estudio sin dormir para cumplir un sueño " +
+         "muy grande y esperanzador para cada persona que llegue a tus manos, demuestras con amor que " +
+         "es un trabajo humanizado que no solo requiere de agallas y mente fría, sino tambien de empatia " +
          "y paciencia. Reconozco tu valor como profesional y admiro la calidad de persona que eres. \n\n" +
-         "Dios bendiga enormemente tu camino, bendiga tus manos milagrosas y llene de paz tu corazón. \n\n" +
-         "Cada día seré duro, unos de mucha alegría, otros de frustración, unos de mucho dolor y pena. \n\n" +
+         "Dios bendiga enormemente tu camino, bendiga tus manos milagrosas y llene de paz tu corazón. " +
+         "Cada día seré duro, unos de mucha alegría, otros de frustración, unos de mucho dolor y pena. " +
          "Conozco tu corazón lo suficiente como para saber que cada una de esas situaciones lo sentirás " +
          "con intensidad, me encantaría acompañarte en los buenos momentos así como en los malos, " +
-         "sin embargo se que en tus tristezas hay mucho que no quieras contar, sin embargo si yo no \n\n" +
-         "puedo estar rezo por ti para que Dios te acompañe en esos momentos y te de la fuerza para \n\n" +
-         "superarte cada día, como siempre lo haces. Dios te bendiga siempre y cuide a tu familia y amigos. AMÉN.", 
+         "sin embargo se que en tus tristezas hay mucho que no quieras contar, si yo no \n\n" +
+         "puedo estar o quiza quieras intentar hacerlo sola rezo por ti para que Dios te acompañe en esos momentos y te de la fuerza para \n\n" +
+         "superarte cada día, como siempre lo haces. \n\n" +
+         "Con paciencia, porque Dios te recompensará todo enormemente, el te mira, te escucha, reconoce tu esfuerzo, mucho animooooooo. \n\n" +
+         "Dios te bendiga siempre y cuide a tu familia y amigos. AMÉN.", 
   firma: "Con cariño, Andi 🖤 Numeros 6:24-26",
 
   fecha: "30 de agosto · Feliz día de la enfermera Peruana.",
