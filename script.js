@@ -8,19 +8,19 @@ const CONFIG = {
   heroSub: "Preparé algo especial para una de las enfermeras más increíbles de este mundo.",
 
   datos: [
-    { icono: "stetoscopio", label: "Profesión", texto: "Demuestras en cada practica que tienes la vocación para ello, mujer de grande corazon y de manos bendecidas.", fondo: "img/Kuromi obstetra.jpg" },
+    { icono: "stetoscopio", label: "Profesión", texto: "Demuestras en cada practica que tienes la vocación para ello, mujer de grande corazon y de manos bendetas por Dios.", fondo: "img/Kuromi obstetra.jpg" },
     { icono: "moño", label: "Estilo", texto: "Mujer de mucho carácter, con destellos de ternura y amor, persistente. Igual que Kuromi.", fondo: "img/kuromi study.jpg" },
     { icono: "corazon", label: "Color favorito", texto: "Aun por descubrirlo", fondo: "img/kuromi gamer.jpg" },
     { icono: "musica", label: "Banda favorita", texto: "Queen, Los cafres, Norick, Guerreros del bajo, Canserbero, etc.", fondo: "img/kuromi phone.jpg" },
     { icono: "pastel", label: "Antojo favorito", texto: "Tallarines verdes", fondo: "img/kuromi sleep.jpg" },
-    { icono: "estrella", label: "Superpoder", texto: "Realmente me haz demostrado que a pesar de todos los problemas que te afligen, puedes superarlos con tu esfuerzo y voluntad.", fondo: "img/kuromi ninja.jpg" },
+    { icono: "estrella", label: "Superpoder", texto: "Realmente me haz demostrado que a pesar de todos los problemas que te afligen, puedes superarlos con tu esfuerzo, voluntad y Dios te te bendice siempre.", fondo: "img/kuromi ninja.jpg" },
   ],
 
   fotos: [
     { src: "fotos/chinchin.png", caption: "Día de practicas", nota: "Recuerdo de cuando estabas en tus practicas, despertar temprano, un poco cansado, sin embargo, refleja lo increible que eres, definitivamente es uno de los momentos mas significativos dentro de tu camino profesional. Mi foto favorita." },
-    { src: "fotos/moto.jpeg", caption: "La moto", nota: "Trabajaste duro para tenerla, algo que querias alcanza, eso refleja lo sacrificado que tuvo que ser, el esfuerzo que hiciste, lo reconozco. Eres increible y puedes lograr lo que deseas." },
+    { src: "fotos/moto.jpeg", caption: "La moto", nota: "Trabajaste duro para tenerla, algo que querias alcanzar, eso refleja lo sacrificado que tuvo que ser, el esfuerzo que pusiste y sobreponerte a ello, lo reconozco. Eres increible y puedes lograr lo que deseas." },
     { src: "fotos/licencia.jpeg", caption: "La licencia", nota: "Como no recordar lo emocionada que estabas, al mismo tiempo nerviosa por pasar el examen, incluso estudiamos para eso jajajaja, un lindo recuerdo que me llevo. Tuviste nervios, pero lo lograste (Practica escrita y circuito)." },
-    { src: "fotos/herida.jpeg", caption: "Uno de tus rasguños", nota: "Lograste conseguir la moto y eso fue una gran felicidad para ambos, sin embargo a veces suceden estas cosas, parte de aprender, aunque suele generarme preocupación, yo confio en ti. ANIMOOOO CHINCHINNNNN." },
+    { src: "fotos/herida.jpeg", caption: "Uno de tus rasguños", nota: "Lograste conseguir la moto y eso fue una gran felicidad para ambos, sin embargo a veces suceden estas cosas(varias veces xd), parte de aprender, aunque suele generarme preocupación, yo confio en ti. ANIMOOOO CHINCHINNNNN." },
     { src: "fotos/barba.jpeg", caption: "Foto random", nota: "Una de las fotos randoms mas graciosas, algo que tambien guardaré, eres una chica muy espectacular, de gran caracter, valores, a veces dulce otras no tanto, se que puedes ser mejor, sin embargo me alegro mucho de estar acá. Dios te bendiga siempre." },
     { src: "fotos/pelo corto.jpeg", caption: "El cabello corto", nota: "Esta es de las ultimas fotos que tengo de ti, definitivamente esa mirada expresiva que te caracteriza, debo admitir que estas muy linda. Bendita sean tus manos. Amén." },
   ],
@@ -36,7 +36,7 @@ const CONFIG = {
 
   carta: "Hoy es tu día y quiero que sepas lo mucho que admiro todo lo que haces. " +
          "Gracias por tu entrega, tu paciencia y tu cariño con cada persona que cuidas. " +
-         "Es un camino relativamente duro, horas de estudio sin dormir para cumplir un sueño " +
+         "Es un camino relativamente duro, horas de estudio sin dormir, horarios de trabajo cansados y todo para cumplir un sueño " +
          "muy grande y esperanzador para cada persona que llegue a tus manos, demuestras con amor que " +
          "es un trabajo humanizado que no solo requiere de agallas y mente fría, sino tambien de empatia " +
          "y paciencia. Reconozco tu valor como profesional y admiro la calidad de persona que eres. \n\n" +
@@ -44,12 +44,12 @@ const CONFIG = {
          "Cada día seré duro, unos de mucha alegría, otros de frustración, unos de mucho dolor y pena. " +
          "Conozco tu corazón lo suficiente como para saber que cada una de esas situaciones lo sentirás " +
          "con intensidad, me encantaría acompañarte en los buenos momentos así como en los malos, " +
-         "sin embargo se que en tus tristezas hay mucho que no quieras contar, si yo no \n\n" +
-         "puedo estar o quiza quieras intentar hacerlo sola rezo por ti para que Dios te acompañe en esos momentos y te de la fuerza para \n\n" +
+         "sin embargo se que en tus tristezas hay mucho que no quieras contar, si yo no " +
+         "puedo estar o quiza quieras intentar hacerlo sola rezo por ti para que Dios te acompañe en esos momentos y te de la fuerza para " +
          "superarte cada día, como siempre lo haces. \n\n" +
          "Con paciencia, porque Dios te recompensará todo enormemente, el te mira, te escucha, reconoce tu esfuerzo, mucho animooooooo. \n\n" +
          "Dios te bendiga siempre y cuide a tu familia y amigos. AMÉN.", 
-  firma: "Con cariño, Andi 🖤 Numeros 6:24-26",
+  firma: "Con cariño, Andi 🖤 Numeros 6:24-26  >>Presiona el boton varias veces<<",
 
   fecha: "30 de agosto · Feliz día de la enfermera Peruana.",
 };
