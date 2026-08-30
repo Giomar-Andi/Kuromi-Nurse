@@ -231,8 +231,53 @@ function verificarFichaCompleta(items) {
 function mostrarToastClinico() {
   const toast = document.getElementById("clinicalToast");
   toast.classList.add("show");
+  
+  // Lanzar fuegos artificiales
+  lanzarFuegosArtificiales();
+  
   clearTimeout(toast._timeout);
-  toast._timeout = setTimeout(() => toast.classList.remove("show"), 3200);
+  toast._timeout = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 4000);
+}
+
+/* Fuegos artificiales más espectaculares */
+function lanzarFuegosArtificiales() {
+  const colores = ['#ff2f92', '#7b2ff7', '#ffe066', '#ff6b6b', '#4ecdc4', '#ffffff'];
+  const numFuegos = 5;
+  
+  for (let f = 0; f < numFuegos; f++) {
+    setTimeout(() => {
+      const centerX = 50 + (Math.random() - 0.5) * 40;
+      const centerY = 30 + (Math.random() - 0.5) * 30;
+      crearExplosion(centerX, centerY, colores[Math.floor(Math.random() * colores.length)]);
+    }, f * 300);
+  }
+}
+
+function crearExplosion(x, y, color) {
+  const numParticulas = 24;
+  
+  for (let i = 0; i < numParticulas; i++) {
+    const particula = document.createElement('div');
+    particula.className = 'firework';
+    particula.style.left = x + 'vw';
+    particula.style.top = y + 'vh';
+    particula.style.backgroundColor = color;
+    particula.style.boxShadow = `0 0 10px ${color}, 0 0 20px ${color}`;
+    
+    const angulo = (Math.PI * 2 * i) / numParticulas;
+    const distancia = 80 + Math.random() * 120;
+    const tx = Math.cos(angulo) * distancia + 'px';
+    const ty = Math.sin(angulo) * distancia + 'px';
+    
+    particula.style.setProperty('--tx', tx);
+    particula.style.setProperty('--ty', ty);
+    
+    document.body.appendChild(particula);
+    
+    setTimeout(() => particula.remove(), 1500);
+  }
 }
 
 /* ---------- Sobre / carta final ---------- */
@@ -250,17 +295,27 @@ function configurarSobre() {
     lanzarConfeti();
     if (!cartaEscrita) escribirCarta();
   };
+  
   const cerrar = () => {
     envelope.classList.remove("open");
     hint.textContent = "Toca el sobre para abrirlo";
   };
 
   envelope.addEventListener("click", (e) => {
-    if (envelope.classList.contains("open")) return; // se cierra solo con la X
+    if (e.target === closeBtn || e.target === hugBtn) return;
+    if (envelope.classList.contains("open")) return;
     abrir();
   });
-  closeBtn.addEventListener("click", (e) => { e.stopPropagation(); cerrar(); });
-  hugBtn.addEventListener("click", (e) => { e.stopPropagation(); lanzarAbrazo(); });
+  
+  closeBtn.addEventListener("click", (e) => { 
+    e.stopPropagation(); 
+    cerrar(); 
+  });
+  
+  hugBtn.addEventListener("click", (e) => { 
+    e.stopPropagation(); 
+    lanzarAbrazo(); 
+  });
 }
 
 function escribirCarta() {
@@ -331,16 +386,21 @@ function lanzarConfeti() {
 }
 
 function lanzarAbrazo() {
-  const layer = document.getElementById("confettiLayer");
-  const corazones = ["🤍", "💜", "🖤"];
-  for (let i = 0; i < 16; i++) {
-    const heart = document.createElement("span");
-    heart.className = "hug-heart";
-    heart.textContent = corazones[Math.floor(Math.random() * corazones.length)];
-    heart.style.left = 35 + Math.random() * 30 + "vw";
-    heart.style.animationDelay = Math.random() * 0.4 + "s";
-    layer.appendChild(heart);
-    setTimeout(() => heart.remove(), 3000);
+  const corazones = ["🤍", "💜", "🖤", "💗"];
+  
+  for (let i = 0; i < 20; i++) {
+    setTimeout(() => {
+      const heart = document.createElement("span");
+      heart.className = "hug-heart";
+      heart.textContent = corazones[Math.floor(Math.random() * corazones.length)];
+      heart.style.left = (10 + Math.random() * 80) + "vw";
+      heart.style.bottom = (10 + Math.random() * 30) + "%";
+      heart.style.animationDelay = Math.random() * 0.5 + "s";
+      heart.style.fontSize = (20 + Math.random() * 30) + "px";
+      document.body.appendChild(heart);
+      
+      setTimeout(() => heart.remove(), 3000);
+    }, i * 100);
   }
 }
 
@@ -372,13 +432,13 @@ function configurarScrollSpy() {
 
 /* ---------- Parallax suave de la mascota ---------- */
 function configurarMascotaParallax() {
-  const mascot = document.getElementById("mascot");
-  if (prefersReducedMotion) return;
+  const mascot = document.getElementById("floatingKuromi");
+  if (prefersReducedMotion || !mascot) return;
 
   const mover = (x, y) => {
     const relX = (x / window.innerWidth - 0.5) * 14;
     const relY = (y / window.innerHeight - 0.5) * 10;
-    mascot.style.transform = `translate(${relX}px, ${relY}px) rotate(${relX / 4}deg)`;
+    mascot.style.transform = `translate(${relX}px, ${relY}px)`;
   };
 
   window.addEventListener("mousemove", (e) => mover(e.clientX, e.clientY));
