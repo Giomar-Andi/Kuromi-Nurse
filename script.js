@@ -17,12 +17,12 @@ const CONFIG = {
   ],
 
   fotos: [
-    { src: "fotos/chinchin.png", caption: "Día de practicas", nota: "Recuerdo de cuando estabas en tus practicas, despertar temprano, un poco cansado, sin embargo, refleja lo increible que eres u definitivamente es uno de los momentos mas significativos dentro de tu camino profesional. Mi foto favorita." },
-    { src: "", caption: "Dos", nota: "Aquí se nota lo increíble que eres." },
-    { src: "", caption: "Tres", nota: "[Escribe un recuerdo bonito]" },
-    { src: "", caption: "Cuatro", nota: "[Escribe un recuerdo bonito]" },
-    { src: "", caption: "Cinco", nota: "[Escribe un recuerdo bonito]" },
-    { src: "", caption: "Seis", nota: "Gracias por siempre estar 🎀" },
+    { src: "fotos/chinchin.png", caption: "Día de practicas", nota: "Recuerdo de cuando estabas en tus practicas, despertar temprano, un poco cansado, sin embargo, refleja lo increible que eres, definitivamente es uno de los momentos mas significativos dentro de tu camino profesional. Mi foto favorita." },
+    { src: "fotos/moto.jpeg", caption: "La moto", nota: "Trabajaste duro para tenerla, algo que querias alcanza, eso refleja lo sacrificado que tuvo que ser, el esfuerzo que hiciste, lo reconozco. Eres increible y puedes lograr lo que deseas." },
+    { src: "fotos/licencia.jpeg", caption: "La licencia", nota: "Como no recordar lo emocionada que estabas, al mismo tiempo nerviosa por pasar el examen, incluso estudiamos para eso jajajaja, un lindo recuerdo que me llevo. Tuviste nervios, pero lo lograste (Practica escrita y circuito)." },
+    { src: "fotos/herida.jpeg", caption: "Uno de tus rasguños", nota: "Lograste conseguir la moto y eso fue una gran felicidad para ambos, sin embargo a veces suceden estas cosas, parte de aprender, aunque suele generarme preocupación, yo confio en ti. ANIMOOOO CHINCHINNNNN." },
+    { src: "fotos/barba.jpeg", caption: "Foto random", nota: "Una de las fotos randoms mas graciosas, algo que tambien guardaré, eres una chica muy espectacular, de gran caracter, valores, a veces dulce otras no tanto, se que puedes ser mejor, sin embargo me alegro mucho de estar acá. Dios te bendiga siempre." },
+    { src: "fotos/pelo corto.jpeg", caption: "El cabello corto", nota: "Esta es de las ultimas fotos que tengo de ti, definitivamente esa mirada expresiva que te caracteriza, debo admitir que estas muy linda. Bendita sean tus manos. Amén." },
   ],
 
   razones: [
