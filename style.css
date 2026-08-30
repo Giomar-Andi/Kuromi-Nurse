@@ -409,18 +409,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   pointer-events: none;
   transition: opacity 0.4s ease, transform 0.4s ease;
   z-index: 200;
-  animation: toastPulse 0.5s ease;
 }
 
 @keyframes toastPulse {
-  0% { transform: translate(-50%, -30px) rotate(-3deg) scale(0.8); }
-  50% { transform: translate(-50%, 0) rotate(-3deg) scale(1.05); }
-  100% { transform: translate(-50%, 0) rotate(-3deg) scale(1); }
+  0% { transform: translate(-50%, -30px) rotate(-3deg) scale(0.8); opacity: 0; }
+  50% { transform: translate(-50%, 0) rotate(-3deg) scale(1.05); opacity: 1; }
+  100% { transform: translate(-50%, 0) rotate(-3deg) scale(1); opacity: 1; }
 }
 
 .clinical-toast.show {
   opacity: 1;
   transform: translate(-50%, 0) rotate(-3deg);
+  animation: toastPulse 0.5s ease;
 }
 
 .clinical-toast .toast-icon {
@@ -435,13 +435,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 15px;
 }
 
-/* Fuegos artificiales en toast */
+/* Fuegos artificiales */
 .firework {
   position: fixed;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--gold-spark);
   pointer-events: none;
   z-index: 300;
   animation: fireworkBurst 1.5s ease-out forwards;
@@ -616,4 +615,66 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .hug-btn:hover {
-  transform: translateY(-3px)
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 28px rgba(255,47,146,0.5);
+}
+
+/* Estados del sobre abierto */
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope.open .envelope-seal {
+  transform: translate(-50%, -200px) scale(0.6) rotate(20deg);
+  opacity: 0;
+}
+
+.envelope.open .envelope-letter {
+  transform: translateY(-120px) rotate(0deg);
+  opacity: 1;
+  z-index: 5;
+}
+
+.envelope.open .envelope-back {
+  box-shadow: 0 30px 60px rgba(123,47,247,0.4);
+}
+
+/* Confeti y corazones */
+.confetti-layer, .hug-layer { position: fixed; inset: 0; pointer-events: none; z-index: 100; overflow: hidden; }
+
+.confetti-piece { position: absolute; top: -20px; font-size: 18px; animation: fall linear forwards; }
+@keyframes fall { 
+  0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(540deg); opacity: 0.8; }
+}
+
+.hug-heart { 
+  position: fixed; 
+  bottom: 30%; 
+  font-size: 24px; 
+  animation: riseHeart 2.5s ease-out forwards; 
+  z-index: 150;
+  pointer-events: none;
+}
+
+@keyframes riseHeart {
+  0% { 
+    transform: translateY(0) scale(0.5); 
+    opacity: 0; 
+  }
+  15% { 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translateY(-400px) scale(1.3); 
+    opacity: 0; 
+  }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer { position: relative; z-index: 1; text-align: center; padding: 30px 20px 50px; font-size: 12.5px; opacity: 0.55; font-family: var(--font-mono); }
+
+a:focus-visible, button:focus-visible, .flip-card:focus-visible, .polaroid:focus-visible { outline: 2px solid var(--pink-soft); outline-offset: 3px; }
