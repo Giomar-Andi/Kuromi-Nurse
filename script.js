@@ -17,7 +17,7 @@ const CONFIG = {
   ],
 
   fotos: [
-    { src: "fotos/chinchin.jpg", caption: "Día de practicas", nota: "Uno de los días en los cuales estuviste en tus practicas, siempre aprendiendo y reconociendo tus habilidades/lo que necesitas." },
+    { src: "fotos/chinchin.png", caption: "Día de practicas", nota: "Recuerdo de cuando estabas en tus practicas, despertar temprano, un poco cansado, sin embargo, refleja lo increible que eres u definitivamente es uno de los momentos mas significativos dentro de tu camino profesional. Mi foto favorita." },
     { src: "", caption: "Dos", nota: "Aquí se nota lo increíble que eres." },
     { src: "", caption: "Tres", nota: "[Escribe un recuerdo bonito]" },
     { src: "", caption: "Cuatro", nota: "[Escribe un recuerdo bonito]" },
