@@ -52,7 +52,7 @@ const CONFIG = {
          "es un trabajo humanizado que no solo requiere de agallas y mente fría, sino tambien de empatia \n\n" +
          "y paciencia. Reconozco tu valor como profesional y admiro la calidad de persona que eres. \n\n" +
          "Dios bendiga enormemente tu camino, bendiga tus manos milagrosas y llene de paz tu corazón. \n\n" +
-         "Cada día seré duro, unos de mucha alegría, otros de frustración, unos de mucho dolor y pena, \n\n" +
+         "Cada día seré duro, unos de mucha alegría, otros de frustración, unos de mucho dolor y pena. \n\n" +
          "Conozco tu corazón lo suficiente como para saber que cada una de esas situaciones lo sentirás " +
          "con intensidad, me encantaría acompañarte en los buenos momentos así como en los malos, " +
          "sin embargo se que en tus tristezas hay mucho que no quieras contar, sin embargo si yo no \n\n" +
