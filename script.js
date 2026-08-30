@@ -57,7 +57,7 @@ const CONFIG = {
          "con intensidad, me encantaría acompañarte en los buenos momentos así como en los malos, " +
          "sin embargo se que en tus tristezas hay mucho que no quieras contar, sin embargo si yo no \n\n" +
          "puedo estar rezo por ti para que Dios te acompañe en esos momentos y te de la fuerza para \n\n" +
-         "superarte cada día, como siempre lo haces. Dios te bendiga siempre y cuide a tu familia y amigos. AMÉN." 
+         "superarte cada día, como siempre lo haces. Dios te bendiga siempre y cuide a tu familia y amigos. AMÉN.", 
   firma: "Con cariño, Andi 🖤 Numeros 6:24-26",
 
   fecha: "30 de agosto · Feliz día de la enfermera Peruana.",
